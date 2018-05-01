@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - lts/*
+  - node
+
+cache:
+  directories:
+    - node_modules
+  yarn: true
+
+before_install:
+  - |
+    set -e
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - >/dev/null
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list >/dev/null
+    sudo apt-get update -qq && sudo apt-get install -qq -o=Dpkg::Use-Pty=0 -y yarn >/dev/null 2>/dev/null
+    shopt -s expand_aliases
+    alias yarn=/usr/bin/yarn
+    yarn --version
+
+install:
+  - yarn install --pure-lockfile --no-progress
+
+script:
+  - yarn run lint
+  - yarn run coverage
+
+notifications:
+  email: false

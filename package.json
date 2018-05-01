@@ -1,0 +1,48 @@
+{
+	"name": "freedesktop-icons",
+	"description": "Find freedesktop icon paths",
+	"version": "0.1.0",
+	"license": "MIT",
+	"engines": {
+		"node": ">=8"
+	},
+	"author": "Sebastian Meyer",
+	"homepage": "https://github.com/bastimeyer/freedesktop-icons",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bastimeyer/freedesktop-icons.git"
+	},
+	"main": "lib/index.js",
+	"dependencies": {
+		"xdg-basedir": "^3.0.0"
+	},
+	"devDependencies": {
+		"ava": "^1.0.0-beta.4",
+		"babel-plugin-istanbul": "^4.1.6",
+		"babel-register": "^6.26.0",
+		"eslint": "^4.19.1",
+		"nyc": "^11.7.1",
+		"proxyquire": "^2.0.1",
+		"sinon": "^4.5.0"
+	},
+	"scripts": {
+		"lint": "eslint lib/** test/**",
+		"test": "ava test",
+		"coverage": "nyc ava test"
+	},
+	"babel": {
+		"plugins": [ "istanbul" ],
+		"sourceMaps": "inline"
+	},
+	"nyc": {
+		"all": true,
+		"cache": false,
+		"exclude": [ "test/**" ],
+		"include": [ "lib/**" ],
+		"instrument": false,
+		"report-dir": "./.coverage",
+		"reporter": [ "lcov", "text" ],
+		"require": [ "babel-register" ],
+		"sourceMap": false
+	}
+}

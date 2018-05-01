@@ -25,6 +25,7 @@ install:
 script:
   - yarn run lint
   - yarn run coverage
+  - yarn run codecov
 
 notifications:
   email: false

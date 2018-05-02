@@ -14,8 +14,6 @@ Find icon paths according to the [freedesktop icon theme specification](https://
 
 Requires at least NodeJS `8.0.0`.
 
-*Package has not been published yet*
-
 ```bash
 # via yarn
 yarn add freedesktop-icons

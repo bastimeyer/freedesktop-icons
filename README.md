@@ -1,7 +1,7 @@
 freedesktop-icons
 ===
 
-![][badge-npm] ![][badge-travis] ![][badge-codecov]
+[![][badge-npm]][npm] [![][badge-gh-actions]][gh-actions] [![][badge-codecov]][codecov]
 
 Find icon paths according to the [freedesktop icon theme specification](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html).
 
@@ -97,6 +97,9 @@ async () => {
 - Implement theme directory caching, as mentioned in the freedesktop icon theme specification
 
 
+  [npm]: https://www.npmjs.com/package/freedesktop-icons
+  [gh-actions]: https://github.com/bastimeyer/freedesktop-icons/actions?query=event%3Apush+branch%3Amaster
+  [codecov]: https://codecov.io/gh/bastimeyer/freedesktop-icons
   [badge-npm]: https://img.shields.io/npm/v/freedesktop-icons.svg?style=flat-square
-  [badge-travis]: https://img.shields.io/travis/bastimeyer/freedesktop-icons.svg?style=flat-square
+  [badge-gh-actions]: https://img.shields.io/github/workflow/status/bastimeyer/freedesktop-icons/Test.svg?style=flat-square
   [badge-codecov]: https://img.shields.io/codecov/c/github/bastimeyer/freedesktop-icons.svg?style=flat-square

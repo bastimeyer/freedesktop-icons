@@ -30,7 +30,7 @@ test( "Get theme description", async t => {
 	parseStub.reset();
 	parseStub.rejects( error );
 
-	await t.throws(
+	await t.throwsAsync(
 		Theme.getThemeDescription( "foobar" ),
 		{ instanceOf: Error, message: "Could not get theme description file" }
 	);

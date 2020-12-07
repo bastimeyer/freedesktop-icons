@@ -20,7 +20,7 @@ test( "Rejects on missing file", async t => {
 	t.truthy( t.context.createReadStreamStub.calledWithExactly( "/foo/bar" ) );
 
 	t.context.readStream.emit( "error", new Error( "failed" ) );
-	await t.throws( promise, { instanceOf: Error, message: "failed" } );
+	await t.throwsAsync( promise, { instanceOf: Error, message: "failed" } );
 });
 
 

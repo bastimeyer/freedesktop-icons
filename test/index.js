@@ -25,37 +25,37 @@ test( "Clear cache", t => {
 test( "Get icon failures", async t => {
 	t.context.findIconsStub.rejects( new Error( "Fail" ) );
 
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject(),
 		{ instanceOf: Error, message: "Missing icon query" }
 	);
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( [] ),
 		{ instanceOf: Error, message: "Missing icon query" }
 	);
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( {} ),
 		{ instanceOf: Error, message: "Invalid icon query input" }
 	);
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( { name: "" } ),
 		{ instanceOf: Error, message: "Invalid icon query input" }
 	);
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( "" ),
 		{ instanceOf: Error, message: "Invalid icon query input" }
 	);
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( 123 ),
 		{ instanceOf: Error, message: "Invalid icon query input" }
 	);
 
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( "foo", undefined, [] ),
 		{ instanceOf: Error, message: "Missing icon file name extensions" }
 	);
 
-	await t.throws(
+	await t.throwsAsync(
 		t.context.subject( "foo" ),
 		{ instanceOf: Error, message: "Fail" }
 	);

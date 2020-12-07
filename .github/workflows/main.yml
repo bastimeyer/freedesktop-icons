@@ -1,0 +1,30 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 10
+          - 12
+          - 14
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install dependencies
+        run: yarn install --pure-lockfile --no-progress --non-interactive
+      - name: Lint
+        run: yarn run lint
+      - name: Test
+        run: yarn run coverage
+      - name: Upload coverage data
+        uses: codecov/codecov-action@v1
+        with:
+          name: node:${{ matrix.node }}

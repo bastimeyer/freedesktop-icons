@@ -61,7 +61,7 @@ test( "Theme constructor", t => {
 	);
 
 	const theme = new Theme( "foobar", new Map([
-		[ "Icon Theme", new Map([ [ "directories", " foo , bar " ] ]) ],
+		[ "Icon Theme", new Map([ [ "directories", " foo , bar , " ] ]) ],
 		[ "foo", new Map([ [ "size", 32 ] ]) ],
 		[ "bar", new Map([ [ "size", 64 ] ]) ]
 	]) );

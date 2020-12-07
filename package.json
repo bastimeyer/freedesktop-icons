@@ -4,7 +4,7 @@
 	"version": "0.1.0",
 	"license": "MIT",
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"author": "Sebastian Meyer",
 	"homepage": "https://github.com/bastimeyer/freedesktop-icons",

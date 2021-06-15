@@ -49,16 +49,16 @@ module.exports = function freedesktopIcons(
 	// These have to be internal theme names, as opposed to theme display names.
 	// Always adds "hicolor" as the last theme, as defined in the icon theme specification.
 	// Looks up icons in the theme's parent themes first before continuing with the next one.
-	themes?: ( string[] | string ) = [ "hicolor" ],
+	themes: ( string[] | string ) = [ "hicolor" ],
 
 	// List of specific icon formats.
 	// Searches for png and svg icons by default.
-	fileExtensions?: ( string[] | string ) = [ "png", "svg" ],
+	fileExtensions: ( string[] | string ) = [ "png", "svg" ],
 
 	// List of non-theme fallback paths.
 	// Icons are only being matched by name in fallback paths.
 	// Always adds /usr/share/pixmaps as the last fallback path.
-	fallbackPaths?: ( string[] | string ) = [ "/usr/share/pixmaps" ]
+	fallbackPaths: ( string[] | string ) = [ "/usr/share/pixmaps" ]
 
 ): ( string | null );
 

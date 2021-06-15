@@ -12,7 +12,7 @@ Find icon paths according to the [freedesktop icon theme specification](https://
 
 ## Install
 
-Requires at least NodeJS `10`.
+Requires at least NodeJS `12`.
 
 ```bash
 # via yarn

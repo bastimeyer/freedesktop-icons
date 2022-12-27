@@ -101,5 +101,5 @@ async () => {
   [gh-actions]: https://github.com/bastimeyer/freedesktop-icons/actions?query=event%3Apush+branch%3Amaster
   [codecov]: https://codecov.io/gh/bastimeyer/freedesktop-icons
   [badge-npm]: https://img.shields.io/npm/v/freedesktop-icons.svg?style=flat-square
-  [badge-gh-actions]: https://img.shields.io/github/workflow/status/bastimeyer/freedesktop-icons/Test.svg?style=flat-square
+  [badge-gh-actions]: https://img.shields.io/github/actions/workflow/status/bastimeyer/freedesktop-icons/main.yml?branch=master&style=flat-square
   [badge-codecov]: https://img.shields.io/codecov/c/github/bastimeyer/freedesktop-icons.svg?style=flat-square

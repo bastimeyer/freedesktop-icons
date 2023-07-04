@@ -17,8 +17,8 @@
 		"xdg-basedir": "^4.0.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.18.6",
-		"@babel/register": "^7.18.6",
+		"@babel/core": "^7.22.6",
+		"@babel/register": "^7.22.5",
 		"ava": "^4.3.0",
 		"babel-plugin-istanbul": "^6.1.1",
 		"eslint": "^8.44.0",
